@@ -1,0 +1,6 @@
+.changelog
+.DS_Store
+.ftpconfig
+*.log
+build
+node_modules

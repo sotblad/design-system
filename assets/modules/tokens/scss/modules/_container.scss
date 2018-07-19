@@ -1,0 +1,28 @@
+/**
+ *------------------------------------------------------------------------------
+ *
+ *  Container Module Configuration
+ *
+ */
+
+@include module-set(container, (
+    max-width: (
+        default: 1400px,
+        small: 1200px,
+    ),
+
+    // Used On Each Side Of Container
+    spacer: size()
+));
+
+
+/**
+ *------------------------------------------------------------------------------
+ *
+ *  Functions
+ *
+ */
+
+@function container($key) {
+    @return module-get(container $key);
+}
