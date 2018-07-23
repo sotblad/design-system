@@ -346,6 +346,20 @@
 /**
  *------------------------------------------------------------------------------
  *
+ *  Use Text Color On Default State
+ *
+ */
+
+&--text {
+    @include state(default) {
+        color: button(color text default);
+    }
+}
+
+
+/**
+ *------------------------------------------------------------------------------
+ *
  *  Button Group Themeing
  *
  *  'default' / 'hover' / 'pressed' States Are Replaced By The Group Color
