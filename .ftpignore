@@ -6,3 +6,4 @@
 *.scss
 build
 node_modules
+bundle.json

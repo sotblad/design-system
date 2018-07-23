@@ -1,9 +1,0 @@
-{
-    "js": [
-        "js/trigger/toggle.js",
-        "js/deactivate.js",
-        "js/activate.js",
-        "js/template.js"
-    ],
-    "scss": "scss/_manifest.scss"
-}

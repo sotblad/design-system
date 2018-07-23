@@ -1,8 +1,0 @@
-{
-    "js": [
-        "js/select.js",
-        "js/state.js",
-        "js/textarea.js"
-    ],
-    "scss": "scss/_manifest.scss"
-}

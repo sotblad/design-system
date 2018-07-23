@@ -22,26 +22,26 @@
     "build:css": "run-s css:build css:autoprefix",
     "build:js": "run-s js:build js:uglify",
     "-": "-",
-    "css:autoprefix": "postcss \"../public/**/*.css\" --use autoprefixer --no-map --replace",
-    "css:build": "bundle-json --manifest \"assets/bundle.json\" --assets scss --output \"../public/css\"",
+    "css:autoprefix": "postcss \"../../public/**/*.css\" --use autoprefixer --no-map --replace",
+    "css:build": "bundle-json --manifest \"bundle.json\" --assets scss --output \"../../public/css\"",
     "--": "--",
-    "js:build": "bundle-json --manifest \"assets/bundle.json\" --assets js --output \"../public/js\"",
-    "js:lint": "eslint \"assets/**\"",
-    "js:uglify": "run-for-every-file --src \"../\" --file \"public/**/*.js\" --run \"uglifyjs {{src-file}} --compress --mangle --output {{src-file}}\"",
+    "js:build": "bundle-json --manifest \"bundle.json\" --assets js --output \"../../public/js\"",
+    "js:lint": "eslint \"**\"",
+    "js:uglify": "run-for-every-file --src \"../../\" --file \"public/**/*.js\" --run \"uglifyjs {{src-file}} --compress --mangle --output {{src-file}}\"",
     "---": "---",
-    "svg:compress": "run-for-every-file --src \"assets/modules/icons/svg-compress/\" --dest \"assets/modules/icons/svg/\" --file \"**/*.svg\" --run \"svgo --disable=removeViewBox -i {{src-file}} -o {{dest-file}}\""
+    "svg:compress": "run-for-every-file --src \"modules/icons/svg-compress/\" --dest \"modules/icons/svg/\" --file \"**/*.svg\" --run \"svgo --disable=removeViewBox -i {{src-file}} -o {{dest-file}}\""
   },
   "atom-watch": [
     {
-      "files": "assets/**/*.scss",
+      "files": "**/*.scss",
       "command": "npm run css:build"
     },
     {
-      "files": "assets/**/*.js",
+      "files": "**/*.js",
       "command": "npm run js:build"
     },
     {
-      "files": "assets/**/svg-compress/**/*.svg",
+      "files": "**/svg-compress/**/*.svg",
       "command": "npm run svg:compress"
     }
   ]
