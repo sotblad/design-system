@@ -2,7 +2,7 @@
   "name": "design-system",
   "author": "esportsplus",
   "description": "esportsplus Design System",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "dependencies": {
     "autoprefixer": "^8.6.4",
     "bundle-json": "git+https://github.com/esportsplus/bundle-json.git",
@@ -23,13 +23,13 @@
     "build:js": "run-s js:build js:uglify",
     "-": "-",
     "css:autoprefix": "postcss \"../../public/**/*.css\" --use autoprefixer --no-map --replace",
-    "css:build": "bundle-json --manifest \"bundle.json\" --assets scss --output \"../../public/css\"",
+    "css:build": "bundle-json --manifest \"./bundle.json\" --assets scss --output \"../../public/css\"",
     "--": "--",
-    "js:build": "bundle-json --manifest \"bundle.json\" --assets js --output \"../../public/js\"",
+    "js:build": "bundle-json --manifest \"./bundle.json\" --assets js --output \"../../public/js\"",
     "js:lint": "eslint \"**\"",
-    "js:uglify": "run-for-every-file --src \"../../\" --file \"public/**/*.js\" --run \"uglifyjs {{src-file}} --compress --mangle --output {{src-file}}\"",
+    "js:uglify": "run-for-every-file --src \"../../\" --file \"public/**/*.js\" --run \"uglifyjs {{src-file}} --compress --mangle --wrap {{file-name}} --output {{src-file}}\"",
     "---": "---",
-    "svg:compress": "run-for-every-file --src \"modules/icons/svg-compress/\" --dest \"modules/icons/svg/\" --file \"**/*.svg\" --run \"svgo --disable=removeViewBox -i {{src-file}} -o {{dest-file}}\""
+    "svg:compress": "run-for-every-file --src \"src/modules/icons/svg-compress/\" --dest \"src/modules/icons/svg/\" --file \"**/*.svg\" --run \"svgo --disable=removeViewBox -i {{src-file}} -o {{dest-file}}\""
   },
   "atom-watch": [
     {

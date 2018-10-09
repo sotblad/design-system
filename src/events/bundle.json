@@ -1,0 +1,16 @@
+{
+    "js": [
+        "js/delegate/blur.js",
+        "js/delegate/change.js",
+        "js/delegate/click.js",
+        "js/delegate/focus.js",
+        "js/delegate/hover.js",
+        "js/delegate/keydown.js",
+        "js/delegate/scroll.js",
+        "js/delegate/wheel.js",
+
+        "js/modules.js",
+        "js/ready.js",
+        "js/trigger.js"
+    ]
+}

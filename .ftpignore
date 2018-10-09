@@ -1,9 +1,0 @@
-.changelog
-.DS_Store
-.ftpconfig
-.ftpignore
-*.log
-*.scss
-build
-node_modules
-bundle.json

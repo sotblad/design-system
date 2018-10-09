@@ -1,0 +1,9 @@
+{
+    "js": [
+        "js/autoresize.js",
+        "js/checkbox.js",
+        "js/password.js",
+        "js/select.js"
+    ],
+    "scss": "scss/_manifest.scss"
+}

@@ -1,0 +1,20 @@
+{
+    "app": [
+        "src/bootstrap",
+        "app/bootstrap",
+
+        "src/modules",
+        "app/modules",
+
+        "src/events",
+        "app/events",
+
+        "app/pages"
+    ],
+    "dev": [
+        "dev/modules"
+    ],
+    "sw": [
+        "sw"
+    ]
+}
